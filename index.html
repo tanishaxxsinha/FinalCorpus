@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Tanisha Sinha">
+
+<title>Computational Musicology Portfolio</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="index_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap-a3079740bd26574ad698026625cd03cc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-dark-a3079740bd26574ad698026625cd03cc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-a3079740bd26574ad698026625cd03cc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="index_files/libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="index_files/libs/quarto-dashboard/stickythead.js"></script>
+
+
+
+<script src="index_files/libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="index_files/libs/quarto-dashboard/components.js"></script>
+
+
+
+</head>
+
+<body class="quarto-dashboard dashboard-fill fullcontent quarto-light">
+
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">
+
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Computational Musicology Portfolio</a></div>
+        
+        <div class="navbar-author">Tanisha Sinha</div>
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-background" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#background" data-scrolling="false" href="#background" aria-controls="background" aria-selected="true"><span class="nav-link-text">Background</span></a></li><li class="nav-item" role="presentation"><a id="tab-exploratory-analysis" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#exploratory-analysis" data-scrolling="false" href="#exploratory-analysis" aria-controls="exploratory-analysis" aria-selected="false"><span class="nav-link-text">Exploratory Analysis</span></a></li><li class="nav-item" role="presentation"><a id="tab-pitch" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#pitch" data-scrolling="false" href="#pitch" aria-controls="pitch" aria-selected="false"><span class="nav-link-text">Pitch</span></a></li><li class="nav-item" role="presentation"><a id="tab-timbre" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#timbre" data-scrolling="false" href="#timbre" aria-controls="timbre" aria-selected="false"><span class="nav-link-text">Timbre</span></a></li><li class="nav-item" role="presentation"><a id="tab-chords" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#chords" data-scrolling="false" href="#chords" aria-controls="chords" aria-selected="false"><span class="nav-link-text">Chords</span></a></li><li class="nav-item" role="presentation"><a id="tab-tempo" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#tempo" data-scrolling="false" href="#tempo" aria-controls="tempo" aria-selected="false"><span class="nav-link-text">Tempo</span></a></li><li class="nav-item" role="presentation"><a id="tab-clustering" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#clustering" data-scrolling="false" href="#clustering" aria-controls="clustering" aria-selected="false"><span class="nav-link-text">Clustering</span></a></li><li class="nav-item" role="presentation"><a id="tab-wrap-up" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#wrap-up" data-scrolling="false" href="#wrap-up" aria-controls="wrap-up" aria-selected="false"><span class="nav-link-text">Wrap Up</span></a></li></ul></div></div>
+</nav>
+</header>
+<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">  
+
+<div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div id="background" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-background">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 30fr) minmax(3em, 70fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<h4>
+<strong> Corpus Details at a Glance</strong>
+</h4>
+<p><strong>Overall Theme :</strong> Top 70 most listened in 2025 <br> <strong>Size :</strong> 70 Tracks <br> <strong>Sub-categories :</strong> 2 <br> <strong>Languages :</strong> English, Hindi, Tamil, Korean <br></p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div><div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<h4>
+<strong>Corpus Details</strong>
+</h4>
+<p>My corpus consists of my top 70 songs that I have consistently been listening to and gone back to repeatedly in the past year. They contain a wide variety of songs with a majority of them being in English, followed by Hindi with a couple of songs in Tamil and Korean. These weren’t directly taken from the Spotify Wrapped. Instead I personally handpicked these songs and curated a playlist on Spotify as I listen across multiple platforms and I would like it to accurately represent my tastes. In my opinion I enjoy two distinct kinds of music - one being very high in energy and danceable and the other being much slower, acoustic songs or songs which are still considerably upbeat but sadder lyrics. My music listening is often very dependent on my mood and I have realised I reach out to the former when my spirits are higher and the latter for the days I feel low.<br> <br> Hence, my 70 tracks consist of 35 ‘happy,high’ songs and 25 ‘sad,low’ songs. I would like to point out that this labelling is very subjective and what I might consider a high or a low may not match another’s. Through this portfolio I would like to investigate these two seemingly distinct sub-categories of music that I enjoy and determine if there are any underlying musical similarities in terms of energy, keys, timbre etc. that appeal to me that were previously unknown. <br> <br> Here after the low category of songs will be referred to as ‘Low’ and the high category as ‘High’.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div><div id="exploratory-analysis" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-exploratory-analysis">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<h5>
+<strong> (i) Track Level Features :</strong>
+</h5>
+<p><img src="track-level.png" class="img-fluid" style="display:block; margin-left:auto; margin-right:auto;;width:65.0%" alt="Exploratory"> A box-plot showing the distribution of acousticness, danceability, energy and valence across the 2 categories shows interesting and intuitive results. On average, Low is significantly more acoustic and has lower energy and valence than High. Although on average Low has lower danceability, it is still surprisingly very close to the High mean.</p>
+<hr>
+<h5>
+<strong> (ii) Loudness Amongst Tracks :</strong>
+</h5>
+<p><img src="loudness2.png" class="img-fluid" style="display:block; margin-left:auto; margin-right:auto;;width:65.0%" alt="Loud"> Loudness as a feature had to be included separately as it is measured in dB. It is seen that Low on average is not as loud as High.</p>
+<hr>
+<h5>
+<strong> (iii) Tempo Amongst Tracks :</strong>
+</h5>
+<p><img src="tempo.png" class="img-fluid" style="display:block; margin-left:auto; margin-right:auto;;width:65.0%" alt="Tempo"> Tempo is a very surprising feature. One would assume the ‘low’ songs would likely be slower and have lesser tempo but it seems that the songs that I consider to be low span across a wide range of tempos with both categories’ mean being almost identical.</p>
+<hr>
+<h5>
+<strong> (iv) Danceability vs Valence :</strong>
+</h5>
+<p><img src="dvsv.png" class="img-fluid" style="display:block; margin-left:auto; margin-right:auto;;width:65.0%" alt="d"> Plotting Danceability vs Tempo is an interesting way to see if the way I look at songs is truely what Spotify thinks they are. My entire basis of assigning ‘high’ and ‘low’ was that I consider danceable, happy songs to be ‘high’ and slow, sadder songs to be ‘low’. One would assume that on the graph this would mean that the High would be concentrated at the top right corner while the Low would be concentrated on the bottom left. Interestingly, they span across the whole spectrum of danceability as well as valence. Interesting outliers such as Somebody That I Used to Know and Therefore I Am although are part of the Low category have very high valence and danceability and songs like One of The Girls and Soul Survivor (both in the High group) have very low danceability and valence respectively.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div><div id="pitch" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-pitch">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p>For understanding the pitch feature, 2 songs representative of their category were chosen. From Low - Billie Eilish’s What Was I Made For? and from High - Pitbull’s Give Me Everything Tonight were picked. <br> <br></p>
+<h5>
+<strong> (i) Chromagram Comparison :</strong>
+</h5>
+<p><img src="be_chromagram2.png" class="img-fluid" style="width:49.0%" alt="be"> <img src="pit_chromagram.png" class="img-fluid" style="width:49.0%" alt="pit"></p>
+<p><em>What Was I Made For?</em> shows strong, sustained energy concentrated within a few pitch classes namely E, C, F, G suggesting harmonically simple song. The notes are held for longer periods giving the song its notable melancholic feel. The entire song is quiet consistent in pattern reinforcing the emotional monotony one feels throughtout the song. <br></p>
+<p><em>Give Me Everything Tonight</em>, on the other hand has energy distributed over a broader range of pitch classes like Eb, C ,G ,Ab ,Bb, D. There’s a lot of vertical stripes as opposed to the block pattern in the previous one indicated chords change often which makes the song more energetic and lively. A lot of pitch classes seem to be active simultaneously and there is a high variation throughtout it which ties in perfectly with the dynamic structure of this famous pop hit.</p>
+<hr>
+<h5>
+<strong> (ii) Pitch Based Self-Similarity Matrices :</strong>
+</h5>
+<p><img src="pssm_be.png" class="img-fluid" style="width:49.0%" alt="be"> <img src="pssm_pit.png" class="img-fluid" style="width:49.0%" alt="pit"> In <em>What Was I Made For?</em> comparing the pitch-based self-similarity matrix, distinct block patterns correspond to the musical sections of the song: A1, A2, B, A1, B, A2, where A represents verses and B the chorus. Around 60 seconds, the first chorus begins, with higher pitch reflected as a yellow/green vertical line in the matrix. A similar pattern appears just before 150 seconds during the second chorus, marked by richer harmonies in the line “cause I, cause I, I don’t know how to feel.” Towards the end, the instrumentation is sparser and primarily vocals, producing thicker green bands that reflect the overall pitch stability.</p>
+<p>The SSM for <em>Give Me Everything Tonight</em> while does have a checkerboard pattern of sorts, the repeated sections aren’t the most identical as the song goes through multiple pre-chorus, each similar yet slightly different. There are 2 distinct sections of dissimilarity. The greenish-yellow line that appears a minute into the song reflects the mid-song rap portion of the piece while the subtler green line around 125 seconds corresponds to a pre-drop breakdown where the vocal phrase leads to the main beat with the background instrumentation temporarily thinned.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div><div id="timbre" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-timbre">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<h5>
+<strong> (i) Cepstrogram Comparison :</strong>
+</h5>
+<p><img src="be_cepstrogram.png" class="img-fluid" style="width:49.0%" alt="be"> <img src="pit_cepstrogram.png" class="img-fluid" style="width:49.0%" alt="pit"></p>
+<p>Both cepstrograms share a similar overall structure, dominated by stable lower MFCCs, but <em>What Was I Made For</em> is notably more uniform and static across all coefficients, reflecting its consistent, stripped-back timbre throughout. <em>Give Me Everything Tonight</em> shows greater temporal variation, particularly in the mid-range MFCCs, with visible patches of contrasting energy that likely correspond to structural changes in the track (drops, build ups, instrumental changes). This supports classifying it as the High-energy song : more timbral complexity and dynamic range is visible, even without interpreting individual coefficients precisely as that if often quite difficult to interpret.</p>
+<hr>
+<br>
+<h5>
+<strong> (ii) Timbre Based Self-Similarity Matrices :</strong>
+</h5>
+<p><img src="tssm_be2.png" class="img-fluid" style="width:49.0%" alt="be"> <img src="tssm_pit2.png" class="img-fluid" style="width:49.0%" alt="pit"> Examining the timbre-based self-similarity matrix of <em>What Was I Made For</em>, several connections between sound and visual representation are visible. Around 30–40 seconds, a yellow line corresponds to a peak in the song where additional instruments are heard during the lyrics “taking a drive.” Green lines around 80 seconds reflect sections with mostly humming vocals. Around 120 seconds, new instruments appear, indicated by corresponding lines in the matrix. Thick yellow lines near 180 seconds represent a unique instrument with a “twinkling” or shimmering quality, heard only in that section.</p>
+<p>In the timbre based SSM for <em>Give Me Everything Tonight</em> there are multiple, closely spaced lines indicating dissimilarity. This reflects the layered style production of the song where instruments and sounds are constantly being introduced and removed in a cyclical pattern which is a hallmark of dance/EDM-influenced pop production. There are multiple periods of various instrumentation as indicated by the dense stripes around 40-60 second region, 140-160 region and 190-220 region.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div><div id="chords" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-chords">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<h5>
+<strong> (i) Chordogram Comparison :</strong>
+</h5>
+<p><img src="bee.png" class="img-fluid" style="width:49.0%" alt="be"> <img src="pitt.png" class="img-fluid" style="width:49.0%" alt="pit"> <br> In the chordogram for <em>What Was I Made For</em>, there is no one single chord that dominates for long. Instead at any given time there are multiple chords that show up yellow/teal which is consistent with the harmonies we hear in the song. The chords are held for a long time with gradual transitions in colours visually representing the slow harmonic movement. Around 60 seconds, we see a brief vertical spike where Billie sustains a high falsetto melisma, a technique of singing a single syllable, here the word ‘I’, while moving across several different notes creating an expectation of chorus arrival but extending into another pre-chorus instead.</p>
+<p>In <em>Give Me Everything Tonight</em>, on the other hand, at any time there seems to be only a few specific chords that are yellow with the rest drop close to 0 showing more defined chord changes. There are more vertical shifts within this chordogram matching the quick, more decisive chord changes that gives the song it’s energy and dance=oriented character. A subtle vertical line around 75 seconds matches the song where there is an abrupt change in chords.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div><div id="tempo" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-tempo">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p>For comparison across tempo, the tempograms of the High song - Give Me Everything Tonight were not showing anything significant. Hence, for the purposes of comparison it is switched by a very close substitute from the category - Usher &amp; Pitbull’s DJ Got Us Fallin in Love. <br> <br></p>
+<h5>
+<strong> (i) Tempograms for Low : Billie Eilish’s What Was I Made For? :</strong>
+</h5>
+<p><img src="be22.png" class="img-fluid" style="width:49.0%" alt="acf"> <img src="be23.png" class="img-fluid" style="width:49.0%" alt="dft"></p>
+<p>Within the ACT of <em>What Was I Made For?</em> the energy is spread across many different BPM with no single strong horizontal band. This is likely due to the fact that there is no percussion (kick drums or snares) within the song, only light piano making it hard to track the beat. The DFT shows smears of colour throughout the range rather than being concentrated. The light instrumentation with the raspy vocals makes tempo detection ambiguous and given the context of this song, it was a deliberate compositional choice to create an unhurried, pulse-less piece.</p>
+<hr>
+<h5>
+<strong> (ii) Tempograms for High : Usher &amp; Pitbull’s DJ Got Us Fallin in Love :</strong>
+</h5>
+<p><img src="dj22.png" class="img-fluid" style="width:49.0%" alt="acf"> <img src="dj23.png" class="img-fluid" style="width:49.0%" alt="dft"> The tempograms for <em>DJ Got Us Fallin in Love</em> show notably stronger tempo detection in the opening section, where there is a clear percussive intro for the algorithm to identify. Both ACT and DFT representations converge around 120 BPM, a tempo highly characteristic of dance pop, with visible sub-harmonic activity at approximately 60 BPM and harmonic activity at higher multiples (240BPM). As the track progresses into its fuller, more layered arrangement, with vocal-heavy sections, tempo detection becomes less consistent. Nevertheless, the early detection strongly confirms the song’s dance-floor-oriented rhythmic foundation which is a stark contrast to the calm, pulse-free tempogram of What Was I Made For?</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div><div id="clustering" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-clustering">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<h5>
+<strong> (i) Hierarchial Clustering on the Total Corpus :</strong>
+</h5>
+<p><img src="corpus_dendrogram.jpeg" class="img-fluid" style="display:block; margin-left:auto; margin-right:auto;;width:85.0%"> The hierarchial cluster rendered uninteresting results when all the elements of the “recipe” were used. Instead, the top 3 features that were the most useful in classifying music according to the Random Forest Algorithm were picked to see how different the results would be. To my surprise a combination of Loudness, Energy and Acousticness worked out quite well on my whole corpus. It successfully divided it into a 25-75% split of low-dominant and high-dominant songs. This is pretty impressive as my original split of portfolio is at 35-65%. I have highlighted areas in similar colours where I agree the songs in proximity are pretty similar. It has accurately identified common music types like slow, acoustic songs (in dark blue), danceable club hits of Pitbull, Usher etc (in light orange in the middle), upbeat but still a very different vibe of songs in light pink like those by the Weeknd and The Neighbourhood.</p>
+<hr>
+<h5>
+<strong> (ii) Hierarchial Clustering on the Low Sub-Group :</strong>
+</h5>
+<p><img src="low_dendrogram.jpeg" class="img-fluid" style="display:block; margin-left:auto; margin-right:auto;;width:85.0%"> The results of the clustering on just the 25 low songs were more interesting. It essentially divided it into 2 sub-clusters of songs that are have lower valence and yet still quiet upbeat like Therefore I am, Bitter Leaf, Pal Pal and the bigger cluster consists of more acoustic, more traditionally ‘sadder’ sounding songs. This clustering reveals an insight that even within the Low sub-group a futher classification could be made on the basis of beats/tempo. This also explains the wide range of tempo within the Low category in the box-plots during the exploratory analysis. It also seems to have accurately clustered most of Billie Eilish’s songs in the middle from Lost Cause to Lovely.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div><div id="wrap-up" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-wrap-up">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p><img src="cover.jpeg" class="img-fluid" style="display:block; margin-left:auto; margin-right:auto;;width:85.0%"> Across the various analytical dimensions of pitch, timbre and tempo, it is seen that there exists a meaningful distinction between the 2 categories of songs. Chromagrams and chordograms revealed that Low songs similar to What Was I Made For? have sustained pitch classes with gradual chord transitions reflecting an introspective, emotionally restrained character which often is very cathartic to hear during times of distress. The High sings by contrast, have a broader pitch classes, with distinct chord changes accompanied by frequent cyclical timbrel variation giving it its typical dance music character. While those within the High category are likely to be at the popular 120 BPM, the Low category seems to be a collection of intentionally pulse-free songs.</p>
+<p>It is these underlying musical elements that shape how we associate songs with happiness or sadness. This analysis emphasizes how features imperceptible to the untrained ear — harmonic rhythm, timbrel layering, rhythmic pulse — are in fact fundamental in conveying emotional tone and constructing or withholding tension.</p>
+<p>These 2 categories might seem like complete opposites but based on all the combined analysis, an insight I derived is perhaps if I sub-divide my Low category further, I might find a middle ground between the two, thereby having one of low, acoustic, pulse-free songs, one with more beats yet still introspective and low valence and one with high, danceable energy. With these 3 new categories my taste in music would seem less abrupt and perhaps from the middle ground the extreme end I go to is just subjected by the day.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /container fluid -->
+
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
+
+
+
+</body></html>
