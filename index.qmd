@@ -56,7 +56,7 @@ For understanding the pitch feature, 2 songs representative of their category we
 
 ![be](be_chromagram2.png){width=49%} ![pit](pit_chromagram.png){width=49%}
 
-_What Was I Made For?_ shows strong, sustained energy concentrated within a few pitch classes namely E, C, F, G suggesting harmonically simple song. The notes are held for longer periods giving the song its notable melancholic feel. The entire song is quiet consistent in pattern reinforcing the emotional monotony one feels throughtout the song. <br>
+_What Was I Made For?_ shows strong, sustained energy concentrated within a few pitch classes namely E, C, F, G suggesting harmonically simple song. The notes are held for longer periods giving the song its notable melancholic feel. The entire song is quite consistent in pattern reinforcing the emotional monotony one feels throughtout the song. <br>
 
 _Give Me Everything Tonight_, on the other hand has energy distributed over a broader range of pitch classes like Eb, C ,G ,Ab ,Bb, D. There's a lot of vertical stripes as opposed to the block pattern in the previous one indicated chords change often which makes the song more energetic and lively. A lot of pitch classes seem to be active simultaneously and there is a high variation throughtout it which ties in perfectly with the dynamic structure of this famous pop hit.
 
